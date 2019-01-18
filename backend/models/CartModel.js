@@ -12,9 +12,9 @@ const cartSchema = new mongoose.Schema({
             id: {
                 type: ObjectId
             },
-            sum: {
+            amount: {
                 type: String,
-                min: 0
+                min: 1
             }
         }]
     }

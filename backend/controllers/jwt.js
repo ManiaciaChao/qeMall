@@ -34,8 +34,7 @@ module.exports = {
     },
     parse(ctx) {
         let token = ctx.cookies.get('jwt') || null;
-        if (!token) { return false; }
-        console.log(token);
+        if (!token) { return ctx.throw(400); }
         let [header, payload, oldSgn] = token.split(".");
         let newSgn = this.sign(`${header}.${payload}`);
         if (newSgn !== oldSgn) {
