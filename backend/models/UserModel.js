@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const regChecker = require('../controllers/regChecker');
+const ObjectId = mongoose.SchemaTypes.ObjectId;
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
@@ -31,6 +32,14 @@ const userSchema = new mongoose.Schema({
         min: 0, max: 8,
         default: 1,
     },
+    friends: [{
+        type: {
+            uid: {
+                type: ObjectId,
+                required: true
+            }
+        }
+    }]
 }, { timestamps: {} });
 const UserModel = mongoose.model('users', userSchema);
 

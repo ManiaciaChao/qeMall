@@ -23,7 +23,7 @@ app.use(async (ctx, next) => { // logger
     console.log(`${ctx.method} ${ctx.url} in ${processTime}ms`);
 });
 
-global.ctxs = new Map();
+global.ctxs = new WeakMap();
 // register routes
 const mall = require('./routers/mall');
 const user = require('./routers/user');

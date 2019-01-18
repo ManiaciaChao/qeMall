@@ -21,18 +21,25 @@ module.exports = {
         if (!userExist) {
             ctx.throw(400);
         }
-
+        page = ctx.request.body.page || 1;
+        num = ctx.request.body.num || 10;
         try {
             const history = await MsgModel.find({
                 from: new ObjectId(ctx.jwt.uid),
                 to: new ObjectId(ctx.params.to),
-            })
+            }).limit(num).skip((page - 1) * num);
             ctx.body = history;
         } catch (e) {
             ctx.throw(400);
         }
-
-
+    },
+    async status(ctx, next) {
+        // ctx.jwt = jwt.parse(ctx);
+        const userExist = UserModel.findById(ctx.params.uid);
+        if (!userExist) {
+            ctx.throw(400);
+        }
+        ctx.body = ctxs.has(ctx.params.uid) ? 1 : 0;
     },
     // {
     //     "to": "5c41c79842580748a1dc00c9",
@@ -71,5 +78,7 @@ module.exports = {
                 ctx.websocket.send(JSON.stringify({ code: 10, }));
             }
         });
+
+        ctx.websocket.on('close', ())
     }
 }
