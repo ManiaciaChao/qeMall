@@ -33,16 +33,16 @@ const userSchema = new mongoose.Schema({
         default: 1,
     },
     convs: [{
-        type: ObjectId
+        type: String,
+        minlength: 24,
+        maxlength: 24
     }],
     friends: [{
-        type: {
-            uid: {
-                type: ObjectId
-            },
-            nickname: {
-                type: String
-            }
+        uid: {
+            type: ObjectId
+        },
+        nickname: {
+            type: String
         }
     }]
 }, { timestamps: {} });

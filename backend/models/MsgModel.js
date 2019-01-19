@@ -15,7 +15,7 @@ const msgSchema = new mongoose.Schema({
     },
     type: {
         type: String,
-        enum: ['text', 'image', 'audio', 'link', 'bell'],
+        enum: ['text', 'image', 'audio', 'link', 'bell', 'f_invite'],
         required: true
     },
 }, { timestamps: true });
