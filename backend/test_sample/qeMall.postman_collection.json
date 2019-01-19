@@ -1,0 +1,507 @@
+{
+	"info": {
+		"_postman_id": "df5badc9-9fef-4a4d-ad20-61f31e2a564d",
+		"name": "qeMall",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "localhost:3000/api/user/login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"admin\",\n    \"pwHash\": \"hzytql\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/user/login 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"admin\",\n    \"pwHash\": \"hzytql\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/user/register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\t\n    \"email\": \"test@admin.tql\",\t\n    \"pwHash\": \"hzytql\"\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "good",
+			"item": [
+				{
+					"name": "localhost:3000/api/good/add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \n    \"name\": \"testgood\",\n    \"price\": 5652,\n    \"categoryID\": \"ddd\",\n    \"keywords\": [],\n    \"description\": \"dfafda\",\n    \"traderID\": \"23123213\",\n    \"stock\": 22\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/good/add",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"good",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/good/info",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/api/good/info/5c3f3afc00aed013436e0615",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"good",
+								"info",
+								"5c3f3afc00aed013436e0615"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/good/del",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \n    \"name\": \"testgood\",\n    \"price\": 5652,\n    \"categoryID\": \"ddd\",\n    \"keywords\": [],\n    \"description\": \"dfafda\",\n    \"traderID\": \"23123213\",\n    \"stock\": 22\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/good/del/5c3f3afc00aed013436e0615",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"good",
+								"del",
+								"5c3f3afc00aed013436e0615"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/good/update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \n    \"name\": \"testgood\",\n    \"price\": 5652,\n    \"categoryID\": \"ddd\",\n    \"keywords\": [],\n    \"traderID\": \"23123213\",\n    \"stock\": 22\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/good/update/5c3f3afc00aed013436e0615",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"good",
+								"update",
+								"5c3f3afc00aed013436e0615"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/good/activate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/api/good/activate/5c3f3afc00aed013436e0615?isActive=true",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"good",
+								"activate",
+								"5c3f3afc00aed013436e0615"
+							],
+							"query": [
+								{
+									"key": "isActive",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/good/validate",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/api/good/validate/5c3fff4c4ddcc72105dcbd8e?isValid=1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"good",
+								"validate",
+								"5c3fff4c4ddcc72105dcbd8e"
+							],
+							"query": [
+								{
+									"key": "isValid",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/good/search",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \n    \"keywords\": [\"laptop\"]\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/good/search",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"good",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "localhost:3000/cart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/cart",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/cart/add",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/cart",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"cart"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chat",
+			"item": [
+				{
+					"name": "localhost:3000/api/chat/history/5c40867806b5f87a8dd69ed0",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"num\":2,\n\t\"page\":3\n}"
+						},
+						"url": {
+							"raw": "localhost:3000/api/chat/history/5c40867806b5f87a8dd69ed0",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chat",
+								"history",
+								"5c40867806b5f87a8dd69ed0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/chat/convs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/api/chat/convs",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chat",
+								"convs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/chat/convs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/api/chat/convs",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chat",
+								"convs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:3000/api/chat/status/5c40867806b5f87a8dd69ed0",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:3000/api/chat/status/5c40867806b5f87a8dd69ed0",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chat",
+								"status",
+								"5c40867806b5f87a8dd69ed0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
