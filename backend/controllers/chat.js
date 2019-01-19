@@ -41,6 +41,18 @@ module.exports = {
         }
         ctx.body = ctxs.has(ctx.params.uid) ? 1 : 0;
     },
+    async pullConvs(ctx, next) {
+        ctx.jwt = jwt.parse(ctx);
+        const convs = await UserModel.findById(ctx.jwt.uid).convs;
+        ctx.body = convs;
+    },
+    async saveConvs(ctx, next) {
+        ctx.jwt = jwt.parse(ctx);
+        try {
+            const convs = await UserModel.findById(ctx.jwt.uid).convs;
+        } catch { }
+    },
+
     // {
     //     "to": "5c41c79842580748a1dc00c9",
     //     "type": "text",
@@ -79,6 +91,6 @@ module.exports = {
             }
         });
 
-        ctx.websocket.on('close', ())
+        ctx.websocket.on('close', () => { });
     }
 }

@@ -132,5 +132,28 @@ module.exports = {
             ctx.throw(400);
         });
         return;
+    },
+    async userInfo(ctx, next) {
+        ctx.jwt = jwt.parse(ctx);
+        const res = await UserModel.findById(ctx.params.uid);
+        if (!res) {
+            ctx.throw(400, 'user not found');
+        }
+        ctx.body = {
+            username: res.username,
+            email: res.email,
+            role: res.role
+        }
+    },
+    async getUsersByRole(ctx, next) {
+        ctx.jwt = jwt.parse(ctx);
+        if (ctx.jwt.role < 8) {
+            ctx.throw(400);
+        }
+        const res = await UserModel.find({ role: ctx.params.role })
+        if (!res) {
+            ctx.throw(400);
+        }
+        ctx.body = res;
     }
 }

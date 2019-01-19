@@ -32,11 +32,16 @@ const userSchema = new mongoose.Schema({
         min: 0, max: 8,
         default: 1,
     },
+    convs: [{
+        type: ObjectId
+    }],
     friends: [{
         type: {
             uid: {
-                type: ObjectId,
-                required: true
+                type: ObjectId
+            },
+            nickname: {
+                type: String
             }
         }
     }]
