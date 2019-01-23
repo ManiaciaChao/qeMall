@@ -58,7 +58,7 @@ module.exports = {
             res.convs = Array.from(set).slice(0, 9);
             res.save();
             ctx.body = res.convs;
-        } catch {
+        } catch (e) {
             ctx.throw(400);
         }
     },
@@ -96,7 +96,7 @@ module.exports = {
         });
         try {
             await msgDoc.save();
-        } catch {
+        } catch (e) {
             ctx.throw(400);
         }
     },
@@ -129,7 +129,7 @@ module.exports = {
             await targetUser.save();
             await MsgModel.deleteOne(query);
             ctx.body = ctx.params.uid;
-        } catch {
+        } catch (e) {
             ctx.throw(400);
         }
     },
@@ -153,7 +153,7 @@ module.exports = {
             await targetUser.save();
             await MsgModel.deleteOne(query);
             ctx.body = ctx.params.uid;
-        } catch {
+        } catch (e) {
             ctx.throw(400);
         }
     },

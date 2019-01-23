@@ -1,9 +1,9 @@
 {
-    "listenPort": 3000,
-    "dbURI": "mongodb://172.17.0.2/test",
-    "siteName": "qeMall",
-    "jwt": {
-        "expireHours": 1,
-        "secret": "hzytql"
-    }
+  "listenPort": 3000,
+  "dbURI": "mongodb://127.0.0.1:27017/qeMall",
+  "siteName": "qeMall",
+  "jwt": {
+    "expHours": 1,
+    "secret": "hzytql"
+  }
 }
